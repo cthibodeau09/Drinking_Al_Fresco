@@ -1,3 +1,4 @@
 # group2-project1
 
-My favorite part of JavaScript so far is when its completed!
+
+ I enjoy JavaScript because it utilizes both Functional programming and Object-oriented programming.
