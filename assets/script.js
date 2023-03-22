@@ -65,7 +65,7 @@ $(document).ready(function () {
         })
             .then(function (response) {
                 $(".day").each(function (day) {
-                    let day = day + 1;
+                    var day = day + 1;
                     $(this).html("");
                     // Forecast date
                     let dayStatus = dayjs.unix(response.daily[day].dt).format("MM/DD/YYYY");
