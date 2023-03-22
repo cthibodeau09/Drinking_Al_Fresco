@@ -17,11 +17,13 @@ $(document).ready(function () {
     const todayDate = dayjs();
 
     // Functions
+
+    // Find current weather
     function currentQueryURL() {
-        // Weather API URL
+        // OpenWeather API URL
         var currentURL = `https://api.openweathermap.org/data/2.5/weather?`;
 
-        // API Key
+        // OpenWeather API Key
         var APIKey = { "APPID": "55c7242f8bf237f063bd07fa75719af2" };
 
         // Search term
@@ -31,11 +33,11 @@ $(document).ready(function () {
 
         // Generate URL
         return currentURL + $.param(APIKey);
-    }
+    };
 
     // Generate page content based on API response
     function findCurrentWeather(response) {
-         
+
         // Weather icon details
         let weatherIcon = response.weather[0].icon;
         let weatherIconURL = `https://openweathermap.org/img/wn/${weatherIcon}.png`;
@@ -51,12 +53,51 @@ $(document).ready(function () {
         cityWind.text(`Wind Speed: ${response.wind.speed} MPH`);
         cityHumidity.text(`Humidity: ${response.main.humidty}%`);
 
-    }
+        // 2 Day Forecast
+        let currentLat = response.coord.lat;
+        let currentLong = response.coord.lon;
+        let forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${currentLat}&lon=${currentLong}&appid=55c7242f8bf237f063bd07fa75719`;
+
+        // AJAX for current 2-day forecast
+        $.ajax({
+            url: forecastURL,
+            method: "GET"
+        })
+            .then(function (response) {
+                $(".day").each(function (day) {
+                    let day = day + 1;
+                    $(this).html("");
+                    // Forecast date
+                    let dayStatus = dayjs.unix(response.daily[day].dt).format("MM/DD/YYYY");
+                    // Weather icon details
+                    let forecastIcon = response.daily[day].weather[0].icon;
+                    let forecastIconURL = `https://openweathermap.org/img/wn/${forecastIcon}.png`;
+                    let forecastIconDescrip = response.daily[day].weather[0].description;
+                    // Temperature - converted to Fahrenheit
+                    let forecastTempF = ((response.daily[day].temp.day - 273.15) * 1.80 + 32).toFixed(2);
+                    // Wind Speed
+                    let forecastWind = response.daily[day].wind_speed;
+                    // Humidity
+                    let forecastHumidity = response.daily[day].humidity;
+                    // Fill out forecast
+                    let newDiv = $("<div>").attr("class", "day-body");
+                    let newDate = $("<h5>").attr("class", "day-date").text(dayStatus);
+                    let newIcon = $("<p>").attr("class", "day-icon").html("<img class='weather-icon' src=" + forecastIconURL + " />");
+                    let newTemp = $("<p>").attr("class", "day-temp").text(`Temperature: ` + forecastTempF + `℉`);
+                    let newWind = $("<p>").attr("class", "day-wind").text(`Wind Speed: ` + forecastWind + `MPH`);
+                    let newHumidity = $("<p>").attr("class", "day-humidity").text(`Humidity: ` + forecastHumidity + `%`);
+
+                    newDiv.append(newDate, newIcon, newTemp, newWind, newHumidity);
+
+                    $(this).append(newDiv);
+                });
+            })
+    };
 
     // Store search history
     function storeSearch(searchedCity) {
         localStorage.setItem("city" + localStorage.length, searchedCity);
-    }
+    };
 
     // Add searched cities to searched display
     let storedSearchList = "";
@@ -68,7 +109,7 @@ $(document).ready(function () {
             let searchHistoryBtn = $("<button>").text(storedSearchList).addClass("btn button-search").attr("type", "submit");
             searchHistory.append(searchHistoryBtn);
         }
-    }
+    };
 
     // Event Listeners
     searchBtn.on("click", function (event) {
@@ -79,10 +120,22 @@ $(document).ready(function () {
 
         let queryURL = currentQueryURL();
 
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        })
+            .then(findCurrentWeather);
+    });
 
-    })
-
-    
+    $(document).on("click", ".button-search", function () {
+        let prevCity = $(this).text();
+        storeSearch(prevCity);
+        $.ajax({
+            url: `https://api.openweathermap.org/data/2.5/weather?appid=55c7242f8bf237f063bd07fa75719&q=${prevCity}`,
+            method: "GET"
+        })
+            .then(findCurrentWeather);
+    });
 
     // Clear previous searches
     clearBtn.on("click", function () {
