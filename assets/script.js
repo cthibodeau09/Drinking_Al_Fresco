@@ -24,7 +24,7 @@ $(document).ready(function () {
         var currentURL = `https://api.openweathermap.org/data/2.5/weather?`;
 
         // OpenWeather API Key
-        var APIKey = { "APPID": "55c7242f8bf237f063bd07fa75719af2" };
+        var APIKey = { "APPID": "f3e794b6f19299364c3a368c93f4e895" };
 
         // Search term
         APIKey.q = searchCity
@@ -56,7 +56,7 @@ $(document).ready(function () {
         // 2 Day Forecast
         let currentLat = response.coord.lat;
         let currentLong = response.coord.lon;
-        let forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${currentLat}&lon=${currentLong}&appid=55c7242f8bf237f063bd07fa75719`;
+        let forecastURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${currentLat}&lon=${currentLong}&exclude=current,minutely,hourly&appid=f3e794b6f19299364c3a368c93f4e895`;
 
         // AJAX for current 2-day forecast
         $.ajax({
@@ -131,7 +131,7 @@ $(document).ready(function () {
         let prevCity = $(this).text();
         storeSearch(prevCity);
         $.ajax({
-            url: `https://api.openweathermap.org/data/2.5/weather?appid=55c7242f8bf237f063bd07fa75719&q=${prevCity}`,
+            url: `https://api.openweathermap.org/data/2.5/weather?appid=f3e794b6f19299364c3a368c93f4e895&q=${prevCity}`,
             method: "GET"
         })
             .then(findCurrentWeather);
@@ -149,9 +149,9 @@ $(document).ready(function () {
     let lastCity = localStorage.getItem("city" + (localStorage.length - 1));
     let qurl = "";
     if (localStorage.length === 0) {
-        qurl = `https://api.openweathermap.org/data/2.5/weather?appid=55c7242f8bf237f063bd07fa75719&q=Detroit`;
+        qurl = `https://api.openweathermap.org/data/2.5/weather?appid=f3e794b6f19299364c3a368c93f4e895&q=Detroit`;
     } else {
-        qurl = `https://api.openweathermap.org/data/2.5/weather?appid=55c7242f8bf237f063bd07fa75719&q=${lastCity}`;
+        qurl = `https://api.openweathermap.org/data/2.5/weather?appid=f3e794b6f19299364c3a368c93f4e895&q=${lastCity}`;
     }
     $.ajax({
         url: qurl,
