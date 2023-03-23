@@ -5,6 +5,7 @@ body {
     color: white;
     font-family: 'Manrope';
     font-size: 22px;
+    padding-left: 30px;
 }
 
 header {
@@ -13,6 +14,10 @@ header {
     color: rgb(131, 81, 16);
     font-family: 'manrope';
     background-color: rgb(223, 149, 54);
+}
+
+h2 {
+    color: black;
 }
 
 main {
@@ -37,13 +42,7 @@ main {
     background-color: rgb(214, 157, 83);
 }
 
-.weather-container {
-    margin-left: 900px;
-    margin-top: 20px;
-    margin-bottom: 90px;
-}
-
 .bottom {
-    background-color: rgb(223, 149, 54);
+    /* background-color: rgb(223, 149, 54); */
     padding-top: 20px;
 }
