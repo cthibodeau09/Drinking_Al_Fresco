@@ -35,6 +35,25 @@ $(document).ready(function () {
         return currentURL + $.param(APIKey);
     };
 
+    // OpenBrewery DB API 
+    // let breweryURL = `https://api.openbrewerydb.org/breweries?by_city`;
+    
+    // function findBreweries (response) {
+        // $.ajax({
+            // url: breweryURL,
+            // method: "GET"
+        // })
+        //  .then(function (data) {
+            // let docArray = data.response.docs;
+            // for (var i = 0; i < docArray.length; i++) {
+                // let listItem = document.createElement("li");
+                // listItem.textContent = docArray[i].description;
+                // listE1.appendChild(listItem);
+            // };
+    // };
+
+
+
     // Generate page content based on API response
     function findCurrentWeather(response) {
 
