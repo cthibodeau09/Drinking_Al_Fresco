@@ -6,6 +6,7 @@ body {
     font-family: 'Manrope', Arial, serif;
     font-weight: 400;
     font-size: 22px;
+    padding-left: 30px;
 }
 
 header {
@@ -17,12 +18,16 @@ header {
     background-color: rgb(223, 149, 54);
 }
 
+h2 {
+    color: black;
+}
+
 main {
     background-color: black;
 }
 
 .search-container {
-   
+
     padding-top: 20px;
 }
 
@@ -38,13 +43,7 @@ main {
     background-color: rgb(214, 157, 83);
 }
 
-.weather-container {
-    margin-left: 900px;
-    margin-top: 20px;
-    margin-bottom: 90px;
-}
-
 .bottom {
-    background-color: rgb(223, 149, 54);
+    /* background-color: rgb(223, 149, 54); */
     padding-top: 20px;
 }

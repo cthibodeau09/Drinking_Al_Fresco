@@ -22,10 +22,10 @@
         <!-- Div for search area -->
         <aside>
             <!-- Search header -->
-            <h3>Search for city:</h3>
+            <!-- <h3>Search for city:</h3> -->
             <!-- Search box and button -->
             <div class="search-container">
-                <input id="city" type="text" placeholder="Enter city">
+                <input id="city" type="text" placeholder="Enter city Name">
                 <button class="btn" type="submit" id="searchBtn">Search</button>
             </div>
             <p class="is-size-7 is-italic">E.g. Detroit or Detroit, MI, US or Munich, DE</p>
@@ -39,44 +39,93 @@
         </aside>
     </div>
     <!-- Current conditions -->
-    <div>
-        <main>
-            <div>
-                <div>
-                    <h2 id="city-date"><img id="city-icon" src="" alt=""></h2>
-                    <p id="city-temp"></p>
-                    <p id="city-wind"></p>
-                    <p id="city-humidity"></p>
-                </div>
+    <!-- /////////////////////////////////////////// -->
+    <div class="tile">
+        <!-- The magical tile element! -->
+
+
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+                <p class="title" class='fas fa-beer' style='font-size:48px;color:orange'>About Brewery</p>
+
+                <p class="Brewery_name">Brewery Name : <span class="value">10 Barrel Brewing Co</span></p>
+                <p class="Brewery_street">Brewery Street : <span class="value">1501 E St </span></p>
+
+                <p class="Brewery_phone">Brewery Phone : <span class="value">6195782311 </span></p>
+                <p class="Brewery_type">Brewery Type : <span class="value">large </span></p>
+                <p class=" Brewery_website_url"> Brewery Website : <span class="value">http://10barrel.com</span>
+                </p>
+            </article>
+        </div>
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+                <p class="title" class='fas fa-beer' style='font-size:48px;color:orange'>About Weather</p>
+
+                <h2 id="city-date"><img id="city-icon" src="" alt=""></h2>
+                <p id="city-temp"></p>
+                <p id="city-wind"></p>
+                <p id="city-humidity"></p>
+            </article>
+
+        </div>
+
+
+
+    </div>
+
+    <div class="tile">
+        <!-- The magical tile element! -->
+
+
+        <div class="tile is-parent">
+            <!-- <h2>Breweries information</h2> -->
+            <article class="tile is-child notification is-black">
+
+            </article>
+        </div>
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+
+            </article>
+
+        </div>
+        <div class="tile is-parent">
+            <!-- <h2>Weather Forecast</h2> -->
+            <article class="tile is-child notification is-black">
+
+                <div class="day"></div>
+            </article>
+
+        </div>
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-black">
+
+                <div class="day"></div>
+            </article>
+
+        </div>
+    </div>
+
+
+    <div class="bottom">
+        <div class="columns is-mobile">
+            <div class="column">
+                <img src="./assets/images/image1.jfif">
             </div>
-            <!-- 2 Day Forecast (Cards to be generated in JS) -->
-            <div>
-                <div>
-                    <h2>2 Day Forecast</h2>
-                    <div class="day"></div>
-                    <div class="day"></div>
-                </div>
+            <div class="column">
+                <img src="./assets/images/image2.jfif">
             </div>
-        </main>
-        <div class="bottom">
-            <div class="columns is-mobile">
-                <div class="column">
-                    <img src="./assets/images/image1.jfif">
-                </div>
-                <div class="column">
-                    <img src="./assets/images/image2.jfif">
-                </div>
-                <div class="column">
-                    <img src="./assets/images/images3.jfif">
-                </div>
-                <div class="column">
-                    <img src="./assets/images/images4.jfif">
-                </div>
-                <div class="column">
-                    <img src="./assets/images/images5.jfif">
-                </div>
+            <div class="column">
+                <img src="./assets/images/images3.jfif">
+            </div>
+            <div class="column">
+                <img src="./assets/images/images4.jfif">
+            </div>
+            <div class="column">
+                <img src="./assets/images/images5.jfif">
             </div>
         </div>
+    </div>
     </div>
     <footer>
 
