@@ -3,8 +3,7 @@ body {
     height: 100vh;
     background-color: black;
     color: white;
-    font-family: 'Manrope', Arial, serif;
-    font-weight: 400;
+    font-family: 'Manrope';
     font-size: 22px;
 }
 
@@ -13,17 +12,16 @@ header {
     height: 70px;
     color: rgb(131, 81, 16);
     font-family: 'manrope';
-    font-weight: bold;
     background-color: rgb(223, 149, 54);
 }
 
 main {
     background-color: black;
+    font-family: 'manrope';
 }
 
 
 .search-container {
-   
     padding-top: 20px;
 }
 
