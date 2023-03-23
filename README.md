@@ -14,6 +14,8 @@ https://fonts.google.com/
 
 https://openweathermap.org/
 
+https://www.openbrewerydb.org/
+
 https://day.js.org/en/
 
 https://jquery.com/
@@ -25,4 +27,5 @@ Drinking Al Fresco features a search bar which will output a list of breweries i
 
 ## Links
 Github: https://github.com/cthibodeau09/Drinking_Al_Fresco
+
 Deployment: https://cthibodeau09.github.io/Drinking_Al_Fresco/
