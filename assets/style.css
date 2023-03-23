@@ -8,26 +8,21 @@ body {
     font-size: 22px;
 }
 
-#headerid {
-    height: 60px;
+header {
     text-align: center;
+    height: 70px;
     color: rgb(131, 81, 16);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'manrope';
+    font-weight: bold;
     background-color: rgb(223, 149, 54);
 }
 
-.weather-container {
-    margin-left: 900px;
-    margin-top: 20px;
-    margin-bottom: 90px;
-}
-
-.bottom {
+main {
     background-color: black;
 }
 
 .search-container {
-    text-align: center;
+   
     padding-top: 20px;
 }
 
@@ -41,4 +36,15 @@ body {
     font-size: 25px;
     color: rgb(119, 67, 7);
     background-color: rgb(214, 157, 83);
+}
+
+.weather-container {
+    margin-left: 900px;
+    margin-top: 20px;
+    margin-bottom: 90px;
+}
+
+.bottom {
+    background-color: rgb(223, 149, 54);
+    padding-top: 20px;
 }
