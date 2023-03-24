@@ -3,8 +3,7 @@ body {
     height: 100vh;
     background-color: black;
     color: white;
-    font-family: 'Manrope', Arial, serif;
-    font-weight: 400;
+    font-family: 'Manrope';
     font-size: 22px;
     /* padding-left: 30px;*/
 }
@@ -14,7 +13,6 @@ header {
     height: 70px;
     color: rgb(131, 81, 16);
     font-family: 'manrope';
-    font-weight: bold;
     background-color: rgb(223, 149, 54);
 }
 
@@ -25,10 +23,15 @@ header {
 /* 
 main {
     background-color: black;
+<<<<<<< HEAD
 } */
+=======
+    font-family: 'manrope';
+}
+>>>>>>> b5f554ef570e3f66155e2b9aa3ef222ae54ef253
+
 
 .search-container {
-
     padding-top: 20px;
 }
 
