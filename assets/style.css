@@ -5,7 +5,7 @@ body {
     color: white;
     font-family: 'Manrope';
     font-size: 22px;
-    padding-left: 30px;
+    /* padding-left: 30px;*/
 }
 
 header {
@@ -16,14 +16,19 @@ header {
     background-color: rgb(223, 149, 54);
 }
 
-h2 {
+/* h2 {
     color: black;
-}
+} */
 
+/* 
 main {
     background-color: black;
+<<<<<<< HEAD
+} */
+=======
     font-family: 'manrope';
 }
+>>>>>>> b5f554ef570e3f66155e2b9aa3ef222ae54ef253
 
 
 .search-container {
@@ -43,6 +48,6 @@ main {
 }
 
 .bottom {
-    /* background-color: rgb(223, 149, 54); */
+    background-color: rgb(223, 149, 54);
     padding-top: 20px;
 }
