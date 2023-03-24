@@ -66,7 +66,7 @@ $(document).ready(function () {
         // City name
         city = response.name;
         // Current weather details
-        cityDate.text(`${city} (${todayDate.format("MM/DD/YYY")})`);
+        cityDate.text(`${city} (${todayDate.format("MM/DD/YYYY")})`);
         cityDate.append(cityIcon.attr("src", weatherIconURL).attr("alt", `${weatherIconDescrip}`).attr("title", `${weatherIconDescrip}`));
         cityTemp.text(`Temperature: ${tempF.toFixed(2)} ℉`);
         cityWind.text(`Wind Speed: ${response.wind.speed} MPH`);
