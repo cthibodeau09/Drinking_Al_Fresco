@@ -5,7 +5,6 @@ body {
     color: white;
     font-family: 'Manrope';
     font-size: 22px;
-    /* padding-left: 30px;*/
 }
 
 header {
@@ -15,15 +14,6 @@ header {
     font-family: 'manrope';
     background-color: rgb(223, 149, 54);
 }
-
-/* h2 {
-    color: black;
-} */
-
-/* 
-main {
-    background-color: black;
-} */
 
 .search-container {
     padding-top: 20px;
