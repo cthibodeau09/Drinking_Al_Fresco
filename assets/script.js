@@ -70,7 +70,7 @@ $(document).ready(function () {
         cityDate.append(cityIcon.attr("src", weatherIconURL).attr("alt", `${weatherIconDescrip}`).attr("title", `${weatherIconDescrip}`));
         cityTemp.text(`Temperature: ${tempF.toFixed(2)} ℉`);
         cityWind.text(`Wind Speed: ${response.wind.speed} MPH`);
-        cityHumidity.text(`Humidity: ${response.main.humidty}%`);
+        cityHumidity.text(`Humidity: ${response.main.humidity}%`);
 
         // 2 Day Forecast
         let currentLat = response.coord.lat;
