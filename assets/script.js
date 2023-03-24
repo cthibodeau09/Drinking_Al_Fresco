@@ -16,7 +16,7 @@ $(document).ready(function () {
     // Date
     const todayDate = dayjs();
 
-    // Functions
+    // ***Functions***
 
     // Find current weather
     function currentQueryURL() {
@@ -36,7 +36,7 @@ $(document).ready(function () {
     };
 
     // OpenBrewery DB API 
-    // let breweryURL = `https://api.openbrewerydb.org/breweries?by_city`;
+    let breweryURL = `https://api.openbrewerydb.org/breweries?by_city`;
     
     // function findBreweries (response) {
         // $.ajax({
@@ -76,7 +76,7 @@ $(document).ready(function () {
         let currentLat = response.coord.lat;
         let currentLong = response.coord.lon;
         let forecastURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${currentLat}&lon=${currentLong}&exclude=current,minutely,hourly&appid=f3e794b6f19299364c3a368c93f4e895`;
-
+        let breweryCityURL = `${breweryURL}=${city}`;
         // AJAX for current 2-day forecast
         $.ajax({
             url: forecastURL,
@@ -111,6 +111,27 @@ $(document).ready(function () {
                     $(this).append(newDiv);
                 });
             })
+        $.ajax({
+            url: breweryCityURL,
+            method: "GET"
+        })
+            .then(function (response) {
+                $(".brewery").each(function (brewery) {
+                    var brewery = brewery + 1;
+                    $(this).html("");
+                    console.log(brewery, response[brewery]);
+                    let brewDiv = $("<div>").attr("class", "brew-body");
+                    let brewName = $("<h5>").attr("class", "brew-name").text(response[brewery].name);
+                    let brewAddress = $("<p>").attr("class", "brew-address").text(response[brewery].street);
+                    let brewPhone = $("<p>").attr("class", "brew-phone").text(response[brewery].phone);
+                    let brewType = $("<p>").attr("class", "brew-type").text(response[brewery].brewery_type);
+                    let brewURL = $("")
+                    brewDiv.append(brewName, brewAddress, brewPhone, brewType, brewURL);
+
+                    $(this).append(brewDiv);
+                })
+            })
+
     };
 
     // Store search history
