@@ -23,12 +23,7 @@ header {
 /* 
 main {
     background-color: black;
-<<<<<<< HEAD
 } */
-=======
-    font-family: 'manrope';
-}
->>>>>>> b5f554ef570e3f66155e2b9aa3ef222ae54ef253
 
 
 .search-container {
@@ -50,4 +45,13 @@ main {
 .bottom {
     background-color: rgb(223, 149, 54);
     padding-top: 20px;
+}
+
+.column {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: .75rem;
+    padding-left: 60px;
 }
