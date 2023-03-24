@@ -75,8 +75,10 @@ $(document).ready(function () {
         // 2 Day Forecast
         let currentLat = response.coord.lat;
         let currentLong = response.coord.lon;
+        // Brewery Info
         let forecastURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${currentLat}&lon=${currentLong}&exclude=current,minutely,hourly&appid=f3e794b6f19299364c3a368c93f4e895`;
         let breweryCityURL = `${breweryURL}=${city}`;
+
         // AJAX for current 2-day forecast
         $.ajax({
             url: forecastURL,
