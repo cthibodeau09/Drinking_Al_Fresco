@@ -15,26 +15,29 @@
 </head>
 
 <body>
+
     <header class="headerid">
         <h1 class="is-size-1 has-text-weight-bold">Drinking Al Fresco</h1>
     </header>
-    <div class="row">
+
+    <div class="search">
         <!-- Div for search area -->
-        <aside>
+        <aside class="m-3">
             <!-- Search box and button -->
             <div class="search-container">
                 <input id="city" type="text" placeholder="Search for City">
                 <button class="btn" type="submit" id="searchBtn">Search</button>
             </div>
             <p class="is-size-7 is-italic">E.g. Detroit or Detroit, MI, US or Munich, DE</p>
-            <hr>
-            <h3>Past searches: <button class="btn" id="clearBtn" title="Clear search results">Clear History</button>
+            <h3>Past searches: <button class="btn" id="clearBtn" title="Clear search results" style="background-color: lightslategray">Clear History</button>
             </h3>
             <div id="search-history">
                 <!-- Display list of brewery results here -->
             </div>
+            <hr>
         </aside>
     </div>
+
     <!-- Current conditions -->
     <div class="tile">
         <!-- The magical tile element! -->
@@ -61,6 +64,7 @@
             </article>
         </div>
     </div>
+
     <div class="tile">
         <!-- The magical tile element! -->
         <div class="tile is-parent">
@@ -85,6 +89,7 @@
             </article>
         </div>
     </div>
+
     <div class="bottom">
         <div class="columns is-mobile">
             <div class="column">
@@ -104,6 +109,7 @@
             </div>
         </div>
     </div>
+
     <!-- Script Files -->
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
