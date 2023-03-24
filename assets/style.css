@@ -41,6 +41,16 @@ main {
     background-color: rgb(214, 157, 83);
 }
 
+.Brewery_name {
+    font-weight: bold;
+    color: red;
+}
+
+#name {
+    font-weight: bold;
+    color: red;
+}
+
 .bottom {
     background-color: rgb(223, 149, 54);
     padding-top: 20px;
