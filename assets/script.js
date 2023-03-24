@@ -127,7 +127,7 @@ $(document).ready(function () {
                     let brewAddress = $("<p>").attr("class", "brew-address").text(response[brewery].street);
                     let brewPhone = $("<p>").attr("class", "brew-phone").text(response[brewery].phone);
                     let brewType = $("<p>").attr("class", "brew-type").text(response[brewery].brewery_type);
-                    let brewURL = $("")
+                    let brewURL = $("<href>").attr("class", "brew-url").text(response[brewery].website_url);
                     brewDiv.append(brewName, brewAddress, brewPhone, brewType, brewURL);
 
                     $(this).append(brewDiv);
