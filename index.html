@@ -39,29 +39,28 @@
         </aside>
     </div>
     <!-- Current conditions -->
-    <!-- /////////////////////////////////////////// -->
+ 
     <div class="tile">
         <!-- The magical tile element! -->
 
 
         <div class="tile is-parent">
-            <article class="tile is-child notification is-black ">
-                <p class="title" class='fas fa-beer' style='font-size:48px;color:orange'>About Brewery</p>
+            <article class="tile is-child notification is-black">
+                <p class="is-size-3 is-underlined has-text-weight-bold" class='fas fa-beer'style='color:orange;'>About Brewery</p>
 
-                <p class="Brewery_name">Brewery Name : <span class="value">10 Barrel Brewing Co</span></p>
-                <p class="Brewery_street">Brewery Street : <span class="value">1501 E St </span></p>
-
-                <p class="Brewery_phone">Brewery Phone : <span class="value">6195782311 </span></p>
-                <p class="Brewery_type">Brewery Type : <span class="value">large </span></p>
-                <p class=" Brewery_website_url"> Brewery Website : <span class="value">http://10barrel.com</span>
+                <p id="brewery_name" class="is-size-4 has-text-weight-bold">Brewery Name: <span class="value">10 Barrel Brewing Co</span></p>
+                <p id="brewery_street" class="is-size-4 has-text-weight-bold">Brewery Street: <span class="value">1501 E St </span></p>
+                <p id="brewery_phone" class="is-size-4 has-text-weight-bold">Brewery Phone: <span class="value">6195782311 </span></p>
+                <p id="brewery_type" class="is-size-4 has-text-weight-bold">Brewery Type: <span class="value">large </span></p>
+                <p id="brewery_website_url" class="is-size-4 has-text-weight-bold"> Brewery Website: <span class="value">http://10barrel.com</span>
                 </p>
             </article>
         </div>
         <div class="tile is-parent">
             <article class="tile is-child notification is-black">
-                <p class="title" class='fas fa-beer' style='font-size:48px;color:orange'>About Weather</p>
+                <p class="is-size-3 is-underlined has-text-weight-bold" class='fas fa-beer' style='font-size:40px;color:orange'>About Weather</p>
 
-                <h2 id="city-date"><img id="city-icon" src="" alt=""></h2>
+                <h2 class="is-size-4 has-text-weight-bold" id="city-date"><img id="city-icon" src="" alt=""></h2>
                 <p id="city-temp"></p>
                 <p id="city-wind"></p>
                 <p id="city-humidity"></p>
@@ -93,7 +92,7 @@
             <!-- <h2>Weather Forecast</h2> -->
             <article class="tile is-child notification is-black">
 
-                <div class="day"></div>
+                <div class="day" id="date"></div>
             </article>
 
         </div>
