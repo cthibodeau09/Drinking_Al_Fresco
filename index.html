@@ -28,8 +28,9 @@
                 <input id="city" type="text" placeholder="Search for City">
                 <button class="btn" type="submit" id="searchBtn">Search</button>
             </div>
-            <p class="is-size-7 is-italic">E.g. Detroit or Detroit, MI, US or Munich, DE</p>
-            <h3>Past searches: <button class="btn" id="clearBtn" title="Clear search results" style="background-color: lightslategray">Clear History</button>
+            <p class="is-size-7 is-italic">E.g. Detroit or New York</p>
+            <h3>Past searches: <button class="btn" id="clearBtn" title="Clear search results"
+                    style="background-color:  rgb(214, 157, 83)">Clear History</button>
             </h3>
             <div id="search-history">
                 <!-- Display list of brewery results here -->
@@ -43,21 +44,28 @@
         <!-- The magical tile element! -->
         <div class="tile is-parent">
             <article class="tile is-child notification is-black">
-                <p class="is-size-3 is-underlined has-text-weight-bold" class='fas fa-beer'style='color:orange;'>Local Brewery Results</p>
+                <p class="is-size-3 is-underlined has-text-weight-bold" class='fas fa-beer' style='color:orange;'>Local
+                    Brewery Results</p>
 
-                <p id="brewery_name" class="is-size-4 has-text-weight-bold">Brewery Name: <span class="value">10 Barrel Brewing Co</span></p>
-                <p id="brewery_street" class="is-size-4 has-text-weight-bold">Brewery Street: <span class="value">1501 E St </span></p>
-                <p id="brewery_phone" class="is-size-4 has-text-weight-bold">Brewery Phone: <span class="value">6195782311 </span></p>
-                <p id="brewery_type" class="is-size-4 has-text-weight-bold">Brewery Type: <span class="value">large </span></p>
-                <p id="brewery_website_url" class="is-size-4 has-text-weight-bold"> Brewery Website: <span class="value">http://10barrel.com</span>
+                <p id="brewery_name" class="is-size-4 has-text-weight-bold">Brewery Name: <span class="value">10 Barrel
+                        Brewing Co</span></p>
+                <p id="brewery_street" class="is-size-4 has-text-weight-bold">Brewery Street: <span class="value">1501 E
+                        St </span></p>
+                <p id="brewery_phone" class="is-size-4 has-text-weight-bold">Brewery Phone: <span
+                        class="value">6195782311 </span></p>
+                <p id="brewery_type" class="is-size-4 has-text-weight-bold">Brewery Type: <span class="value">large
+                    </span></p>
+                <p id="brewery_website_url" class="is-size-4 has-text-weight-bold"> Brewery Website: <span
+                        class="value">http://10barrel.com</span>
                 </p>
             </article>
         </div>
         <div class="tile is-parent">
             <article class="tile is-child notification is-black">
-                <p class="is-size-3 is-underlined has-text-weight-bold" class='fas fa-beer' style='font-size:40px;color:orange'>Current Weather Conditions</p>
+                <p class="is-size-3 is-underlined has-text-weight-bold" class='fas fa-beer'
+                    style='font-size:40px;color:orange'>Current Weather Conditions</p>
 
-                <h2 class="is-size-4 has-text-weight-bold is-underlined" id="city-date"><img id="city-icon" src="" alt=""></h2>
+                <h2 class="is-size-4 has-text-weight-bold " id="city-date"><img id="city-icon" src="" alt=""></h2>
                 <p id="city-temp"></p>
                 <p id="city-wind"></p>
                 <p id="city-humidity"></p>
