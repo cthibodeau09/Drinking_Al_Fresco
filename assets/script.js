@@ -86,7 +86,7 @@ $(document).ready(function () {
                     let forecastHumidity = response.daily[day].humidity;
                     // Fill out forecast
                     let newDiv = $("<div>").attr("class", "day-body");
-                    let newDate = $("<h5>").attr("class", "day-date has-text-weight-bold ").text(dayStatus);
+                    let newDate = $("<h5>").attr("class", "day-date has-text-weight-bold is-underlined").text(dayStatus);
                     let newIcon = $("<p>").attr("class", "day-icon").html("<img class='weather-icon' src=" + forecastIconURL + " />");
                     let newTemp = $("<p>").attr("class", "day-temp").text(`Temperature: ` + forecastTempF + `℉`);
                     let newWind = $("<p>").attr("class", "day-wind").text(`Wind Speed: ` + forecastWind + `MPH`);
@@ -107,9 +107,9 @@ $(document).ready(function () {
                     $(this).html("");
                     console.log(brewery, response[brewery]);
                     let brewDiv = $("<div>").attr("class", "brew-body");
-                    let brewName = $("<h5>").attr("class", "brew-name has-text-weight-bold ").text('Brewery Name: ' + response[brewery].name);
+                    let brewName = $("<h5>").attr("class", "brew-name has-text-weight-bold is-underlined").text(response[brewery].name);
                     let brewAddress = $("<p>").attr("class", "brew-address").text(`Address: ` + response[brewery].street);
-                    let brewPhone = $("<p>").attr("class", "brew-phone").text(`Phone : ` + response[brewery].phone);
+                    let brewPhone = $("<p>").attr("class", "brew-phone").text(`Phone #: ` + response[brewery].phone);
                     let brewType = $("<p>").attr("class", "brew-type").text(` Brewery Type: ` + response[brewery].brewery_type);
                     let brewURL = $("<href>").attr("class", "brew-url").text(`Website: ` + response[brewery].website_url);
 

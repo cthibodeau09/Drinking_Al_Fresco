@@ -9,6 +9,10 @@ N/A
 ## Usage
 Simply type in the city of your choice into the search bar and select "search". Once the search has been made, a list of breweries in that specific city will appear, along with the current and 2-day weather forecast to allow travelers to plan their outing accordingly. The city searches will save and remain on the webpage until cleared. 
 
+![Screenshot](assets/images/Screenshot.png)
+
+![Screenshot](assets/images/Screenshot2.png)
+
 ## Credits
 https://fonts.google.com/
 
