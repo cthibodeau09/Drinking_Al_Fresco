@@ -24,19 +24,28 @@
         <aside class="m-3">
             <!-- Search box and button -->
             <div class="search-container">
-                <input id="city" type="text" placeholder="Search for City">
-                <button class="btn" type="submit" id="searchBtn">Search</button>
+
+                <input class="input" id="city" type="text" placeholder="Search for City">
+                <button class="button is-normal is-responsive" type="submit" id="searchBtn">
+                    Search
+                </button>
+
             </div>
+            <!--Past history searches-->
             <p class="is-size-7 is-italic">E.g. Detroit or New York</p>
-            <h3>Past searches: <button class="btn" id="clearBtn" title="Clear search results"
-                    style="background-color:  rgb(214, 157, 83)">Clear History</button>
+            <h3>Past searches:
+
+                <button class="button is-normal is-responsive" id="clearBtn">
+                    Clear History
+                </button>
             </h3>
             <div id="search-history">
+                <!-- Display list of brewery results here -->
             </div>
             <hr>
         </aside>
     </div>
-    
+
     <!-- Search results for breweries -->
     <div class="tile is-mobile">
         <div class="tile is-parent">
@@ -96,7 +105,7 @@
             </article>
         </div>
     </div>
-    
+
     <div class="tile is-mobile">
         <div class="tile is-parent">
             <article class="tile is-child notification is-black">
@@ -124,7 +133,7 @@
             </article>
         </div>
     </div>
-<!-- Current weather conditions and forecast -->
+    <!-- Current weather conditions and forecast -->
     <div class="tile">
         <div class="tile is-parent">
             <article class="tile is-child notification is-black">
