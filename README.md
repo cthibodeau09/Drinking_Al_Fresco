@@ -1,7 +1,7 @@
 # Drinking Al Fresco
 
 ## Description
-Drinking Al Fresco is a website that travelers can use to determine the location of a brewery in the city of their choosing. At the same time, a 2-day weather forecast will also be displayed so the user can determine their travel plans. The location can be saved in the search history for future reference and can also be cleared. 
+Drinking Al Fresco is a website that travelers can use to determine the location of a brewery in the city of their choosing. At the same time, a 2-day weather forecast will also be displayed so the user can determine their travel plans. The location can be saved in the search history for future reference and can also be cleared. When the page is refreshed, the results for the last performed search will appear. If the search history is cleared, a default city will appear with search results and weather conditions. 
 
 ## Installation
 N/A
@@ -14,6 +14,9 @@ Simply type in the city of your choice into the search bar and select "search". 
 ![Screenshot](assets/images/Screenshot2.png)
 
 ## Credits
+
+Special thank you to Geraldo Gonzalez for assistance and mentoring with use of the Open Brewery DB API.
+
 https://fonts.google.com/
 
 https://openweathermap.org/
